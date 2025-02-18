@@ -1,15 +1,16 @@
 <?php
-//var url
-$base_url = 'http://localhost/Shoppingcart';
 
-//var database
 $db_host = 'localhost';
-$db_user = 'root';
-$db_pass = '';
-$db_name = 'shoppingcart';
+$db_user = 'its66040233112';
+$db_pass = 'H5tmJ2K8';
+$db_name = 'its66040233112';
 
-//connect to database
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-if($conn->connect_error){
-    die('Database connection error: ' . $conn->connect_error);
+$base_url = "https://hosting.udru.ac.th/{$db_name}/ShoppingCart/";
+
+$conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+
+?>
